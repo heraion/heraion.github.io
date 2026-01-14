@@ -1,0 +1,71 @@
+:root {
+  --bg: #000;
+  --fg: #eaeaea;
+  --muted: #9a9a9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  padding: 120px 40px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+p {
+  max-width: 720px;
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member {
+  color: var(--muted);
+}
+
+.member span {
+  color: var(--fg);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 80px 24px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
