@@ -1,15 +1,14 @@
-// Optional typing animation (disabled by default)
-// Uncomment to enable
+const panels = document.querySelectorAll('.panel');
 
-/*
-const text = "heraion";
-const el = document.getElementById("title");
-let i = 0;
-el.textContent = "";
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
 
-const interval = setInterval(() => {
-  el.textContent += text[i];
-  i++;
-  if (i === text.length) clearInterval(interval);
-}, 120);
-*/
+panels.forEach(panel => observer.observe(panel));
