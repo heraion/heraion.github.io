@@ -66,8 +66,8 @@ body {
 }
 
 .hero h1:hover {
-  transform: scale(1.05);       /* slight zoom */
-  text-shadow: 0 0 3px #5FDDE0; /* extremely subtle cyan glow */
+  transform: scale(1.03);       /* slight zoom */
+  text-shadow: 0 0 4px #5FDDE0; /* extremely subtle cyan glow */
 }
 
 .byline {
@@ -86,7 +86,7 @@ h2 {
 }
 
 h2:hover {
-  transform: scale(1.03); /* subtle hover effect */
+  transform: scale(1.02); /* subtle hover effect */
 }
 
 p {
