@@ -1,71 +1,112 @@
-:root {
-  --bg: #000;
-  --fg: #eaeaea;
-  --muted: #9a9a9a;
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #f5f5f5;
 }
 
 .container {
-  max-width: 900px;
-  padding: 120px 40px;
-  margin: 0 auto;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-section {
-  margin-bottom: 80px;
+.panel {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-h1 {
-  font-size: 3.2rem;
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 400;
-  letter-spacing: -0.02em;
-  margin: 0;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 16px;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 p {
-  max-width: 720px;
-  font-size: 1rem;
-  color: var(--muted);
-  margin: 0;
+  max-width: 640px;
+  line-height: 1.6;
+  color: #cfcfcf;
 }
 
-.team {
+/* Team */
+
+.team-grid {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .member {
-  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.member img {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.member:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
 }
 
 .member span {
-  color: var(--fg);
+  font-weight: 500;
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding: 80px 24px;
-  }
+.member p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
 
-  h1 {
-    font-size: 2.4rem;
+/* Footer */
+
+.footer {
+  justify-content: flex-end;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  padding-bottom: 2rem;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
   }
 }
