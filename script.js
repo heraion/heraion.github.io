@@ -61,7 +61,7 @@ window.addEventListener('resize', () => {
   height = canvas.height = window.innerHeight;
 });
 
-const numParticles = 60;
+const numParticles = window.innerWidth < 768 ? 30 : 60;
 const particles = [];
 
 class Particle {
