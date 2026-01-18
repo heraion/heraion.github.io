@@ -93,6 +93,42 @@ p {
   color: #aaa;
 }
 
+/* Hide default cursor on desktop */
+@media (hover: hover) {
+  body {
+    cursor: none;
+  }
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+
+  background: rgba(255, 255, 255, 0.08);
+  mix-blend-mode: difference;
+
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Hover interaction */
+.cursor.hover {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
 /* Footer */
 
 .footer {
