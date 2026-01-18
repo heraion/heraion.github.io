@@ -62,13 +62,13 @@ body {
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #fff;
-  text-shadow: 0 0 8px #5FDDE0, 0 0 20px #5FDDE0;
+  text-shadow: 0 0 4px #5FDDE0, 0 0 12px #5FDDE0; /* subtle glow */
   animation: glow 2.5s infinite alternate ease-in-out;
 }
 
 @keyframes glow {
-  0% { text-shadow: 0 0 4px #5FDDE0, 0 0 12px #5FDDE0; }
-  100% { text-shadow: 0 0 8px #5FDDE0, 0 0 20px #5FDDE0; }
+  0% { text-shadow: 0 0 2px #5FDDE0, 0 0 8px #5FDDE0; }
+  100% { text-shadow: 0 0 4px #5FDDE0, 0 0 12px #5FDDE0; }
 }
 
 .byline {
@@ -81,7 +81,7 @@ body {
 /* Headings & paragraphs */
 h2 {
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   color: #fff;
 }
 
