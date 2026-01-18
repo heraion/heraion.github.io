@@ -146,11 +146,11 @@ p {
 
 .team {
   display: flex;
-  flex-direction: column;     /* stack content vertically */
-  align-items: center;        /* center horizontally */
-  justify-content: space-between; /* push footer to bottom */
-  min-height: 100vh;          /* section fills viewport */
-  padding: 4rem 2rem;         /* existing padding */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 4rem 2rem;
   box-sizing: border-box;
 }
 
