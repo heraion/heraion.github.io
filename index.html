@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Particle background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
   <main class="container">
 
     <section class="panel hero">
@@ -25,6 +28,15 @@
       </p>
     </section>
 
+    <section class="panel focus">
+      <h2>Why it matters</h2>
+      <p>
+        Modern chip design is growing in complexity. Verification is slow, costly, and prone to errors.
+        heraion leverages AI to automate verification, integrate directly into existing workflows, and
+        accelerate iteration without sacrificing quality.
+      </p>
+    </section>
+
     <section class="panel team">
       <h2>Team</h2>
 
@@ -34,6 +46,10 @@
           <div>
             <span>Arundhati Dixit</span>
             <p>Mechanical Engineering · LLMs & systems</p>
+            <p class="links">
+              <a href="mailto:adixit26@gsb.columbia.com">Mail</a> ·
+              <a href="https://www.linkedin.com/in/arundhati-dixit-19980330/" target="_blank">LinkedIn</a>
+            </p>
           </div>
         </div>
 
@@ -42,6 +58,10 @@
           <div>
             <span>Daniele Loda</span>
             <p>Electronics Engineering · chip design & verification</p>
+            <p class="links">
+              <a href="mailto:dloda26@gsb.columbia.com">Mail</a> ·
+              <a href="https://www.linkedin.com/in/danieleloda/" target="_blank">LinkedIn</a>
+            </p>
           </div>
         </div>
       </div>
@@ -53,7 +73,9 @@
 
   </main>
 
+  <!-- Custom cursor -->
   <div class="cursor"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
