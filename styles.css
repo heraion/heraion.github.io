@@ -144,13 +144,22 @@ p {
   color: #fff;
 }
 
-/* Footer */
+.team {
+  display: flex;
+  flex-direction: column;     /* stack content vertically */
+  align-items: center;        /* center horizontally */
+  justify-content: space-between; /* push footer to bottom */
+  min-height: 100vh;          /* section fills viewport */
+  padding: 4rem 2rem;         /* existing padding */
+  box-sizing: border-box;
+}
+
+/* Footer inside team section */
 .footer {
-  justify-content: flex-end;
-  text-align: center;
   font-size: 0.85rem;
   color: #666;
-  padding-bottom: 2rem;
+  text-align: center;
+  margin-top: 2rem; /* space from team grid */
 }
 
 /* Mobile */
