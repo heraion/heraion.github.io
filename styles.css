@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +17,16 @@ body {
   position: relative;
 }
 
+/* Container for scroll */
 .container {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  position: relative; /* keep above canvas */
+  position: relative;
   z-index: 1;
 }
 
+/* Sections */
 .panel {
   min-height: 100vh;
   padding: 4rem 2rem;
@@ -44,12 +46,23 @@ body {
   transform: translateY(0);
 }
 
+/* Hero */
 .hero h1 {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #aaa;
 }
 
+.byline {
+  margin-top: 1rem;
+  font-weight: 300;
+  color: #ccc;
+  max-width: 600px;
+}
+
+/* Headings & paragraphs */
 h2 {
   font-weight: 400;
   margin-bottom: 1rem;
@@ -59,6 +72,7 @@ p {
   max-width: 640px;
   line-height: 1.6;
   color: #cfcfcf;
+  margin-bottom: 1rem;
 }
 
 /* Team */
@@ -130,40 +144,18 @@ p {
   }
 }
 
-.cursor {
+.cursor,
+.cursor-halo {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-
-  background: rgba(255, 255, 255, 0.15);
-  mix-blend-mode: difference;
-
   transform: translate(-50%, -50%);
-  transition:
-    width 0.2s ease,
-    height 0.2s ease,
-    background 0.2s ease;
 }
 
-.cursor.hover {
+.cursor {
   width: 14px;
   height: 14px;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-/* Canvas covers full screen */
-#bg-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-  background: #000;
-}
+  background: rgba(255,255,
