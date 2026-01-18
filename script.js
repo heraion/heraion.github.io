@@ -8,7 +8,7 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.2 }
 );
-panels.forEach(panel => observer.observe(panel));
+//panels.forEach(panel => observer.observe(panel));
 
 // Cursor + halo
 const cursor = document.querySelector('.cursor');
