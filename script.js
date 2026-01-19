@@ -23,9 +23,9 @@ document.addEventListener('mousemove', e => {
 });
 
 function animateCursor() {
-  currentX += (mouseX - currentX) * 0.15; // slightly slower follow
+  currentX += (mouseX - currentX) * 0.15;
   currentY += (mouseY - currentY) * 0.15;
-  haloX += (mouseX - haloX) * 0.06; // slower halo
+  haloX += (mouseX - haloX) * 0.06;
   haloY += (mouseY - haloY) * 0.06;
 
   cursor.style.left = `${currentX}px`;
@@ -68,7 +68,7 @@ class Particle {
   constructor() {
     this.x = Math.random()*width;
     this.y = Math.random()*height;
-    this.vx = (Math.random()-0.5)*0.1; // slower speed
+    this.vx = (Math.random()-0.5)*0.1;
     this.vy = (Math.random()-0.5)*0.1;
     this.radius = 2;
   }
@@ -81,7 +81,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-    ctx.fillStyle = 'rgba(95,221,224,0.12)'; // soft cyan particles
+    ctx.fillStyle = 'rgba(95,221,224,0.18)';
     ctx.fill();
   }
 }
@@ -96,7 +96,7 @@ function drawLines() {
       const dist = Math.sqrt(dx*dx + dy*dy);
       if(dist<120){
         ctx.beginPath();
-        ctx.strokeStyle = 'rgba(95,221,224,0.06)'; // soft cyan lines
+        ctx.strokeStyle = 'rgba(95,221,224,0.10)';
         ctx.lineWidth=1;
         ctx.moveTo(particles[i].x,particles[i].y);
         ctx.lineTo(particles[j].x,particles[j].y);
